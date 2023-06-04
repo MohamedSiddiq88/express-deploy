@@ -3,3 +3,6 @@ npm init
 npm i express
 npm i mongodb
 npm i dotenv
+
+----if you dont want to kill the server and start again ,this pacckage restart the server automatically 
+npm i nodemon

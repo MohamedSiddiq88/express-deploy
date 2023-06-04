@@ -39,6 +39,7 @@ router.get("/all",async (req,res)=>{
  router.post("/add",async(req,res)=>{
     try {
         const newStudent=req.body;
+        // console.log(newStudent);
         if(!newStudent){
             return res.status(400).send({data:"No details provided"});
         }
