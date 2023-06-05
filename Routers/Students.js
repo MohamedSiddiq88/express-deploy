@@ -44,7 +44,7 @@ router.get("/all",async (req,res)=>{
             return res.status(400).send({data:"No details provided"});
         }
         const result= await addStudentsData(newStudent);
-        res.status(200).send({data:{result:result,message:"New Student added successfully"}});
+        res.status(200).send(result);
     } catch (error) {
         res.status(500).send({data:"Internal server Error"});
     }
