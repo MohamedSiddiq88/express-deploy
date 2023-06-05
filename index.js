@@ -18,8 +18,8 @@ app.use(cors({
   app.use(express.json());
 
 
-// // Students router
-// app.use("/students", studentsRouter);
+// Students router
+app.use("/students", studentsRouter);
 
 // Listen to the server
 app.listen(PORT, () => console.log(`Server started on localhost:${PORT}`));
