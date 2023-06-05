@@ -73,7 +73,7 @@ router.get("/all",async (req,res)=>{
             return res.status(400).json({data:"No details provided"});
         }
         const result =await deleteStudentData(id);
-        res.status(200).json({data:{result:result,message:"Deleted successfully"}})
+        res.status(200).json(result)
         
 
     } catch (error) {
