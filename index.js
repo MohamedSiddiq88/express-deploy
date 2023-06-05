@@ -1,21 +1,21 @@
 import express from "express";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
+import cors from "cors";
 import { studentsRouter } from "./Routers/Students.js";
 
-// configure the envirenment
-dotenv.config()
+// Configure the environment
+dotenv.config();
 
-//initialize express server framework
-const PORT=process.env.PORT;
-const app=express();
+// Initialize express server framework
+const PORT = process.env.PORT;
+const app = express();
 
-//middleware
+// Middleware
 app.use(express.json());
+app.use(cors()); // Enable CORS
 
-//students routers
-app.use("/students",studentsRouter)
+// Students router
+app.use("/students", studentsRouter);
 
-
-
-//listen to a server
-app.listen(PORT,()=>console.log( `server started in localhost:9090`));
+// Listen to the server
+app.listen(PORT, () => console.log(`Server started on localhost:${PORT}`));
