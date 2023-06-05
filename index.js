@@ -13,8 +13,7 @@ const app = express();
 // Middleware
 app.use(cors({
     origin: 'http://localhost:3000', // Replace with your React app's origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
   })); 
   app.use(express.json());
 
