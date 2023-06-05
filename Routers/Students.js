@@ -16,7 +16,7 @@ router.get("/all",async (req,res)=>{
          res.status(400).send("user not found");
          return
      }
-      res.status(200).json({data:students})
+      res.status(200).json(students)
     } catch (error) {
       res.status(500).json("internal server error")
     }
