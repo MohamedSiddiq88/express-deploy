@@ -58,7 +58,7 @@ router.get("/all",async (req,res)=>{
             return res.status(400).json({data:"No details provided"});
         }
         const result =await updateStudentData(id,updatedData);
-        res.status(200).json({data:{result:result,message:"Updated successfully"}})
+        res.status(200).json({result:result})
 
     } catch (error) {
         res.status(500).json({data:"Internal server Error"});
