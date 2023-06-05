@@ -15,12 +15,12 @@ app.use(cors({
     origin: 'http://localhost:3000', // Replace with your React app's origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
-  })); // Enable CORS
+  })); 
   app.use(express.json());
 
 
-// Students router
-app.use("/students", studentsRouter);
+// // Students router
+// app.use("/students", studentsRouter);
 
 // Listen to the server
 app.listen(PORT, () => console.log(`Server started on localhost:${PORT}`));
