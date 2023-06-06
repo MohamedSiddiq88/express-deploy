@@ -3,9 +3,9 @@ import { addStudentsData, deleteStudentData, getAllStudents, getStudentsById, up
 
 const router = express.Router();
 
-router.get("/",(req,res)=>{
-    res.send(<a href="https://express-deploy-pi.vercel.app/students/all">All Data</a>);
-})
+router.get("/", (req, res) => {
+    res.redirect("/students/all");
+  });
 
 router.get("/all",async (req,res)=>{
     try {
