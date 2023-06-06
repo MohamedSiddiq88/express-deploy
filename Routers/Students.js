@@ -3,6 +3,10 @@ import { addStudentsData, deleteStudentData, getAllStudents, getStudentsById, up
 
 const router = express.Router();
 
+router.get("/",(req,res)=>{
+    res.send("Welcome");
+})
+
 router.get("/all",async (req,res)=>{
     try {
      if(req.query.experience){
