@@ -12,9 +12,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'https://ubiquitous-flan-bbb85f.netlify.app', // Replace with your React app's origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-  })); 
+  origin: 'https://ubiquitous-flan-bbb85f.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
   app.use(express.json());
 
 
