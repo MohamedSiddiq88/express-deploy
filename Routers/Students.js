@@ -4,7 +4,12 @@ import { addStudentsData, deleteStudentData, getAllStudents, getStudentsById, up
 const router = express.Router();
 
 router.get("/",(req,res)=>{
-    res.send('<a href="https://express-deploy-pi.vercel.app/students/all">All Data</a>');
+    const htmlContent = `
+    <h1>Welcome to the Student Data Portal</h1>
+    <p>Click <a href="/students/all">here</a> to view all student data.</p>
+    <p>Feel free to explore other pages.</p>
+  `;
+  res.send(htmlContent);
 })
 
 router.get("/all",async (req,res)=>{
